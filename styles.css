@@ -1,0 +1,61 @@
+body {
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.pink-background {
+    background-color: #FFC0CB;
+}
+
+.blue-background {
+    background-color: #ADD8E6;
+}
+
+.container {
+    max-width: 600px;
+    margin: 10% auto;
+    padding: 20px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    font-size: 28px;
+}
+
+p {
+    font-size: 18px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin: 10px;
+}
+
+#yes-btn {
+    background-color: #ff4da6;
+    color: white;
+}
+
+#no-btn {
+    background-color: #ff3333;
+    color: white;
+    position: relative;
+}
+
+.center-photo, .center-video {
+    width: 80%;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.center-video {
+    max-width: 90%;
+}

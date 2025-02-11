@@ -1,24 +1,24 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const noButton = document.getElementById("noButton");
+    const noButton = document.getElementById("no-btn");
 
-    noButton.addEventListener("mouseover", function () {
-        const maxX = window.innerWidth - noButton.offsetWidth;
-        const maxY = window.innerHeight - noButton.offsetHeight;
-
-        const randomX = Math.floor(Math.random() * maxX);
-        const randomY = Math.floor(Math.random() * maxY);
-
-        noButton.style.position = "absolute";
-        noButton.style.left = randomX + "px";
-        noButton.style.top = randomY + "px";
-    });
+    if (noButton) {
+        noButton.addEventListener("mouseover", function () {
+            const x = Math.random() * (window.innerWidth - noButton.clientWidth);
+            const y = Math.random() * (window.innerHeight - noButton.clientHeight);
+            noButton.style.position = "absolute";
+            noButton.style.left = `${x}px`;
+            noButton.style.top = `${y}px`;
+        });
+    }
 });
 
 document.addEventListener("DOMContentLoaded", function () {
-    const bgMusic = document.getElementById("bgMusic");
+    const audio = document.getElementById("bg-music");
 
-    bgMusic.addEventListener("canplay", function () {
-        bgMusic.currentTime = 46; // Start at 46 seconds
-        bgMusic.play();
-    });
+    if (audio) {
+        audio.addEventListener("canplay", function () {
+            audio.currentTime = 46; // Start at 46 seconds
+            audio.play();
+        });
+    }
 });
