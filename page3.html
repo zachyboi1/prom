@@ -3,16 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prom?</title>
+    <title>Promposal 💙</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body class="page3">
-    <div class="container">
-        <h1 class="big-text">Will you also be my prom date? 💃🕺</h1>
-        <img src="media/prom.jpg" alt="Prom Picture">
-        <button class="yes-btn" onclick="goToPage('page4.html')">Yes</button>
-        <button class="no-btn">No</button>
+<body>
+    <div class="container blue-bg">
+        <h1 class="big-text">Will you also be my prom date? 💙</h1>
+        <img src="media/prom.jpg" class="centered-photo">
+        <div class="buttons">
+            <button id="yesProm" class="yes">Yes</button>
+            <button id="noProm" class="no">No</button>
+        </div>
     </div>
-    <script src="script.js"></script>
+    <script>
+        document.getElementById("yesProm").addEventListener("click", function () {
+            window.location.href = "page4.html";
+        });
+
+        document.getElementById("noProm").addEventListener("mouseover", function () {
+            this.style.position = "absolute";
+            this.style.left = Math.random() * 80 + "vw";
+            this.style.top = Math.random() * 80 + "vh";
+        });
+    </script>
 </body>
 </html>
