@@ -1,4 +1,4 @@
-/* General page styling */
+/* General styling */
 body {
     font-family: 'Arial', sans-serif;
     text-align: center;
@@ -7,15 +7,9 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #FFC0CB; /* Light pink */
     margin: 0;
+    background-color: #FFC0CB; /* Light pink */
 }
-
-/* Messenger preview metadata */
-meta[property="og:title"] { content: "Click here Daney" }
-meta[property="og:description"] { content: "I have something special for you! ❤️" }
-meta[property="og:image"] { content: "media/photo1.jpg" }
-meta[property="og:url"] { content: "https://yourwebsite.com" }
 
 /* Center everything */
 .container {
@@ -26,103 +20,69 @@ meta[property="og:url"] { content: "https://yourwebsite.com" }
     width: 100%;
 }
 
-/* Text styling */
-h1 {
-    font-size: 28px;
-    color: #333;
-    margin-bottom: 10px;
-}
-
-p {
-    font-size: 18px;
-    color: #555;
-}
-
-/* Yes/No Buttons */
+/* Buttons */
 .yes-btn, .no-btn {
-    border-radius: 15px; /* Slightly rounded edges */
+    border-radius: 15px;
     width: 120px;
     height: 50px;
     font-size: 18px;
     border: none;
     cursor: pointer;
-    transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
+    margin: 10px;
 }
 
-/* Yes Button (Green) */
+/* Yes (Green) */
 .yes-btn {
-    background-color: #4CAF50; /* Green */
+    background-color: #4CAF50;
     color: white;
 }
 
-/* No Button (Red) */
+/* No (Red) */
 .no-btn {
-    background-color: #FF4D4D; /* Red */
+    background-color: #FF4D4D;
     color: white;
     position: relative;
 }
 
-/* Move 'No' button when hovered or tapped */
-.no-btn:hover {
-    transform: translate(10px, -10px);
-}
-
-/* 'No' button moves away on click */
+/* "No" button moves away */
 .no-btn:active {
     position: absolute;
-    top: calc(50% + 50px);
     left: calc(50% - 100px);
+    top: calc(50% + 50px);
 }
 
-/* "I have another question" button */
+/* "Another Question" Button */
 .question-btn {
-    border-radius: 25px; /* More rounded edges */
+    border-radius: 25px;
     padding: 15px 30px;
-    background-color: #8A2BE2; /* Purple */
+    background-color: #8A2BE2;
     color: white;
     font-size: 20px;
     border: none;
     cursor: pointer;
-    transition: background-color 0.2s ease-in-out;
 }
 
-/* Button hover effects */
-.yes-btn:hover, .question-btn:hover {
-    background-color: #3e8e41;
-}
+/* Specific page backgrounds */
+.page2 { background-color: #FFD1DC; }
+.page3 { background-color: #ADD8E6; }
 
-/* Page-specific backgrounds */
-.page2 {
-    background-color: #FFD1DC; /* Soft pink */
-}
-
-.page3 {
-    background-color: #ADD8E6; /* Light blue */
-}
-
-/* Page 3 text larger */
-.page3 h1 {
+/* Big text */
+.big-text {
     font-size: 32px;
     font-weight: bold;
 }
 
-/* Centered Images */
+/* Images */
 img {
     width: 80%;
-    max-width: 250px; /* Smaller for mobile */
+    max-width: 250px;
     border-radius: 15px;
     margin: 20px 0;
 }
 
-/* Final Video */
+/* Video */
 #happy-video {
     width: 90%;
     max-width: 400px;
     border-radius: 15px;
-    margin-top: 20px;
-}
-
-/* Background Music Fix */
-audio {
-    display: none;
 }
