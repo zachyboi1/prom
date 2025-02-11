@@ -7,9 +7,15 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #FFC0CB; /* Light pink default background */
+    background-color: #FFC0CB; /* Light pink */
     margin: 0;
 }
+
+/* Messenger preview metadata */
+meta[property="og:title"] { content: "Click here Daney" }
+meta[property="og:description"] { content: "I have something special for you! ❤️" }
+meta[property="og:image"] { content: "media/photo1.jpg" }
+meta[property="og:url"] { content: "https://yourwebsite.com" }
 
 /* Center everything */
 .container {
@@ -24,6 +30,7 @@ body {
 h1 {
     font-size: 28px;
     color: #333;
+    margin-bottom: 10px;
 }
 
 p {
@@ -102,7 +109,7 @@ p {
 /* Centered Images */
 img {
     width: 80%;
-    max-width: 400px;
+    max-width: 250px; /* Smaller for mobile */
     border-radius: 15px;
     margin: 20px 0;
 }
@@ -113,4 +120,9 @@ img {
     max-width: 400px;
     border-radius: 15px;
     margin-top: 20px;
+}
+
+/* Background Music Fix */
+audio {
+    display: none;
 }
