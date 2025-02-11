@@ -1,16 +1,15 @@
-function playNoSound() {
-    let noSound = new Audio("media/no-sfx.mp3");
-    noSound.play();
-}
+document.addEventListener("DOMContentLoaded", function () {
+    const noButton = document.getElementById("noButton");
 
-function showNoVideo() {
-    let popup = document.getElementById("videoPopup");
-    let video = document.getElementById("noVideo");
+    noButton.addEventListener("mouseover", function () {
+        const maxX = window.innerWidth - noButton.offsetWidth;
+        const maxY = window.innerHeight - noButton.offsetHeight;
 
-    popup.style.display = "block";
-    video.play();
+        const randomX = Math.floor(Math.random() * maxX);
+        const randomY = Math.floor(Math.random() * maxY);
 
-    video.onended = function() {
-        popup.style.display = "none";
-    };
-}
+        noButton.style.position = "absolute";
+        noButton.style.left = randomX + "px";
+        noButton.style.top = randomY + "px";
+    });
+});
