@@ -1,8 +1,16 @@
+/* General Styles */
 body {
     text-align: center;
     font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
+/* Background Colors */
 .pink-background {
     background-color: #FFC0CB;
 }
@@ -11,44 +19,96 @@ body {
     background-color: #ADD8E6;
 }
 
-.green-btn {
-    background-color: #28a745;
-    color: white;
-    padding: 10px 20px;
+/* Container */
+.container {
+    width: 90%;
+    max-width: 500px;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Buttons */
+button {
+    padding: 12px 20px;
     border: none;
     cursor: pointer;
     font-size: 18px;
+    margin: 10px;
+    width: 80%;
+    max-width: 250px;
+}
+
+.green-btn {
+    background-color: #28a745;
+    color: white;
 }
 
 .no-btn {
     background-color: red;
     color: white;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-    font-size: 18px;
+    position: relative;
+}
+
+/* No Button Movement */
+@media (hover: hover) { /* Ensures this works on desktops, not touchscreens */
+    .no-btn:hover {
+        position: absolute;
+        left: calc(10% + 40px);
+        top: calc(10% + 40px);
+    }
+}
+
+/* Text Sizes */
+h1 {
+    font-size: 2rem;
 }
 
 .big-text {
-    font-size: 2em;
+    font-size: 2.5rem;
     font-weight: bold;
 }
 
-.center-video {
-    width: 50%;
-    margin: auto;
+/* Images */
+img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 10px;
 }
 
+/* Video */
+.center-video {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    margin-top: 20px;
+}
+
+/* Next Button */
+.next-btn {
+    background-color: purple;
+    color: white;
+}
+
+/* Love Text */
 .love-text {
     font-size: 20px;
     font-weight: bold;
 }
 
-.next-btn {
-    background-color: purple;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-    font-size: 18px;
+/* Media Query for Small Screens */
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+    .big-text {
+        font-size: 2rem;
+    }
+    button {
+        font-size: 16px;
+        width: 90%;
+    }
+    img, .center-video {
+        max-width: 250px;
+    }
 }
