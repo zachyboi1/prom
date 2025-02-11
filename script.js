@@ -1,5 +1,10 @@
-// Move the "No" button away when clicked
 document.addEventListener("DOMContentLoaded", function () {
+    // Redirect function
+    function goToPage(url) {
+        window.location.href = url;
+    }
+
+    // Moving "No" button
     let noButton = document.querySelector(".no-btn");
     if (noButton) {
         noButton.addEventListener("click", function () {
@@ -11,14 +16,16 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    // Lover Boy music starts at 0:46
+    // Start "Loverboy" at 0:46
     let music = document.getElementById("loverboy-music");
     if (music) {
-        music.currentTime = 46;
-        music.play();
+        music.addEventListener("canplay", function () {
+            music.currentTime = 46;
+            music.play();
+        });
     }
 
-    // Ensure final video plays without sound
+    // Autoplay & loop final video
     let video = document.getElementById("happy-video");
     if (video) {
         video.muted = true;
