@@ -40,7 +40,7 @@ button {
     font-size: 18px;
     margin: 10px;
     width: 80%;
-    max-width: 250px;
+    max-width: 100px;
     border-radius: 20px; /* Smooth rounded edges */
     font-weight: bold;
     transition: 0.3s ease-in-out;
