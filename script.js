@@ -1,24 +1,22 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const noButton = document.getElementById("no-btn");
-
+    // Move the "No" button away when clicked
+    const noButton = document.getElementById("no-button");
     if (noButton) {
         noButton.addEventListener("mouseover", function () {
-            const x = Math.random() * (window.innerWidth - noButton.clientWidth);
-            const y = Math.random() * (window.innerHeight - noButton.clientHeight);
+            const x = Math.random() * (window.innerWidth - 100);
+            const y = Math.random() * (window.innerHeight - 50);
             noButton.style.position = "absolute";
             noButton.style.left = `${x}px`;
             noButton.style.top = `${y}px`;
         });
     }
-});
 
-document.addEventListener("DOMContentLoaded", function () {
-    const audio = document.getElementById("bg-music");
-
-    if (audio) {
-        audio.addEventListener("canplay", function () {
-            audio.currentTime = 46; // Start at 46 seconds
-            audio.play();
+    // Make background music in thankyou.html start at 0:46
+    const bgMusic = document.getElementById("bg-music");
+    if (bgMusic) {
+        bgMusic.addEventListener("canplay", function () {
+            bgMusic.currentTime = 46;
+            bgMusic.play();
         });
     }
 });
