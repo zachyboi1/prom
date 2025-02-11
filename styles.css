@@ -1,140 +1,43 @@
-/* General Centering */
-body {
-    text-align: center;
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    flex-direction: column; /* Stacks items vertically */
-}
-
-/* Background Colors */
-.pink-background {
-    background-color: #FFC0CB;
-}
-
-.blue-background {
-    background-color: #ADD8E6;
-}
-
-/* Centering Container */
-.container {
-    width: 90%;
-    max-width: 500px;
-    padding: 20px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Ensures everything is centered */
-    justify-content: center;
-}
-
-/* Buttons - Rounded, Smooth, and Colored */
+/* General button styles */
 button {
-    padding: 12px 20px;
+    font-size: 18px;
+    padding: 10px 20px;
     border: none;
     cursor: pointer;
-    font-size: 18px;
-    margin: 10px;
-    width: 80%;
-    max-width: 100px;
-    border-radius: 20px; /* Smooth rounded edges */
-    font-weight: bold;
-    transition: 0.3s ease-in-out;
+    transition: transform 0.2s ease-in-out;
 }
 
-/* Yes Button - Green */
-.green-btn {
-    background-color: #28a745;
+/* Square yes/no buttons */
+.yes-btn, .no-btn {
+    border-radius: 15px; /* Slightly rounded corners */
+    width: 100px;
+    height: 50px;
+    text-align: center;
+}
+
+/* Yes button styles */
+.yes-btn {
+    background-color: #4CAF50; /* Green */
     color: white;
 }
 
-.green-btn:hover {
-    background-color: #218838;
-}
-
-/* No Button - Red */
+/* No button styles */
 .no-btn {
-    background-color: #ff4d4d;
+    background-color: #FF4D4D; /* Red */
     color: white;
     position: relative;
 }
 
+/* Moving effect */
 .no-btn:hover {
-    background-color: #cc0000;
+    transform: translate(10px, -10px);
 }
 
-/* Moving No Button (Only on Desktop) */
-@media (hover: hover) { 
-    .no-btn:hover {
-        position: absolute;
-        left: calc(10% + 40px);
-        top: calc(10% + 40px);
-    }
-}
-
-/* Purple Button (Next) */
-.next-btn {
-    background-color: #6a0dad;
+/* "I have another question" button */
+.question-btn {
+    border-radius: 25px; /* More rounded corners */
+    padding: 15px 30px;
+    background-color: #8A2BE2; /* Purple */
     color: white;
-}
-
-.next-btn:hover {
-    background-color: #580b9e;
-}
-
-/* Text Sizes */
-h1 {
-    font-size: 2rem;
-}
-
-.big-text {
-    font-size: 2.5rem;
-    font-weight: bold;
-}
-
-/* Center Images */
-img {
-    width: 100%;
-    max-width: 300px;
-    height: auto;
-    border-radius: 10px;
-    display: block;
-    margin: 20px auto;
-}
-
-/* Centered Video */
-.center-video {
-    width: 100%;
-    max-width: 400px;
-    height: auto;
-    margin: 20px auto;
-    border-radius: 15px; /* Rounded video edges */
-    display: block;
-}
-
-/* Love Text */
-.love-text {
     font-size: 20px;
-    font-weight: bold;
-}
-
-/* Mobile-Friendly Adjustments */
-@media screen and (max-width: 480px) {
-    h1 {
-        font-size: 1.8rem;
-    }
-    .big-text {
-        font-size: 2rem;
-    }
-    button {
-        font-size: 16px;
-        width: 90%;
-    }
-    img, .center-video {
-        max-width: 250px;
-    }
 }
