@@ -13,3 +13,12 @@ document.addEventListener("DOMContentLoaded", function () {
         noButton.style.top = randomY + "px";
     });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    const bgMusic = document.getElementById("bgMusic");
+
+    bgMusic.addEventListener("canplay", function () {
+        bgMusic.currentTime = 46; // Start at 46 seconds
+        bgMusic.play();
+    });
+});
