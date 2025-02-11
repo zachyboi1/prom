@@ -1,43 +1,116 @@
-/* General button styles */
-button {
+/* General page styling */
+body {
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #FFC0CB; /* Light pink default background */
+    margin: 0;
+}
+
+/* Center everything */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+/* Text styling */
+h1 {
+    font-size: 28px;
+    color: #333;
+}
+
+p {
     font-size: 18px;
-    padding: 10px 20px;
+    color: #555;
+}
+
+/* Yes/No Buttons */
+.yes-btn, .no-btn {
+    border-radius: 15px; /* Slightly rounded edges */
+    width: 120px;
+    height: 50px;
+    font-size: 18px;
     border: none;
     cursor: pointer;
-    transition: transform 0.2s ease-in-out;
+    transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
 }
 
-/* Square yes/no buttons */
-.yes-btn, .no-btn {
-    border-radius: 15px; /* Slightly rounded corners */
-    width: 100px;
-    height: 50px;
-    text-align: center;
-}
-
-/* Yes button styles */
+/* Yes Button (Green) */
 .yes-btn {
     background-color: #4CAF50; /* Green */
     color: white;
 }
 
-/* No button styles */
+/* No Button (Red) */
 .no-btn {
     background-color: #FF4D4D; /* Red */
     color: white;
     position: relative;
 }
 
-/* Moving effect */
+/* Move 'No' button when hovered or tapped */
 .no-btn:hover {
     transform: translate(10px, -10px);
 }
 
+/* 'No' button moves away on click */
+.no-btn:active {
+    position: absolute;
+    top: calc(50% + 50px);
+    left: calc(50% - 100px);
+}
+
 /* "I have another question" button */
 .question-btn {
-    border-radius: 25px; /* More rounded corners */
+    border-radius: 25px; /* More rounded edges */
     padding: 15px 30px;
     background-color: #8A2BE2; /* Purple */
     color: white;
     font-size: 20px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+/* Button hover effects */
+.yes-btn:hover, .question-btn:hover {
+    background-color: #3e8e41;
+}
+
+/* Page-specific backgrounds */
+.page2 {
+    background-color: #FFD1DC; /* Soft pink */
+}
+
+.page3 {
+    background-color: #ADD8E6; /* Light blue */
+}
+
+/* Page 3 text larger */
+.page3 h1 {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+/* Centered Images */
+img {
+    width: 80%;
+    max-width: 400px;
+    border-radius: 15px;
+    margin: 20px 0;
+}
+
+/* Final Video */
+#happy-video {
+    width: 90%;
+    max-width: 400px;
+    border-radius: 15px;
+    margin-top: 20px;
 }
